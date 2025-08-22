@@ -1,2 +1,109 @@
-# rablink.github.io
-website pribadi rablink
+!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>ZHII BUSINESS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    img.logo {
+      width: 120px;
+      height: auto;
+      margin-top: 30px;
+    }
+    h1 {
+      font-size: 48px;
+      margin-top: 20px;
+    }
+    h2 {
+      font-size: 32px;
+      margin: 20px 0;
+    }
+    p {
+      font-size: 20px;
+      margin: 15px 20px;
+      line-height: 1.5;
+    }
+    .strike {
+      text-decoration: line-through;
+      color: #ffaaaa;
+    }
+    .promo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #ffeb3b;
+      margin: 20px 0;
+    }
+    .countdown {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff4444;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo bisnis -->
+  <img src="logo.png" alt="Logo ZHII Business" class="logo">
+
+  <!-- Kata sambutan -->
+  <h1>WELCOME TO ZHII BUSINESS</h1>
+  <p>👥 sudah 94.330 member bergabung!</p>
+
+  <!-- Tulisan join -->
+  <h2>JOIN DAN RAIH KEUNTUNGAN</h2>
+
+  <!-- Penjelasan bisnis -->
+  <p>
+    <b>LOWONGAN PEKERJAAN</b><br><br>
+    Mau income 100RB-2JT sehari kak?? Bisa banget 😍<br>
+    BISNIS INI SANGAT COCOK UNTUK PELAJAR, MAHASISWA, IRT, PENGANGGURAN,  
+    KERJA SAMPINGAN untuk semua kalangan ⚠️<br><br>
+    <b>BIG PROMO HANYA UTK 10 ORANG PERTAMA</b><br>
+    ⚠️Penghasilan minimal 100rb-500rb /hari!!! <br>
+    Kamu mau kan biar ATM gendut😊 YUK JOIN🥰 <br><br>
+    ❌NO MLM ❌NO JUDI ❌NO MONEY GAMES <br>
+    ✅100% halal
+  </p>
+
+  <!-- Promo -->
+  <div class="promo">PROMO JOIN HARI INI 🔥</div>
+  <h2>Rp.60.000 <span class="strike">Rp.350.000</span></h2>
+  <p>💥 Diskon 85% untuk 10 orang pertama</p>
+
+  <!-- Countdown -->
+  <div class="promo">🔥 PROMO SPESIAL BERAKHIR DALAM:</div>
+  <div id="countdown" class="countdown"></div>
+  <p>Jangan sampai kelewatan! Harga akan kembali normal ke <span class="strike">Rp.350.000</span></p>
+
+  <script>
+    // Hitung mundur 24 jam
+    var countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);
+
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML =
+        hours + "j " + minutes + "m " + seconds + "d ";
+
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "Promo Berakhir ❌";
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>
